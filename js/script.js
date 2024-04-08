@@ -132,18 +132,22 @@ const showNote = (note)=>{
     document.querySelector('#title-note').innerHTML= "<h1>"+note.title+"</h1>";
     document.querySelector('#content-note').innerHTML = `<p>${note.content}</p>
     <p>Ultima alteração: ${dateFormat(note.lastTime)}</p>`
+
     let divEdit = document.createElement("div");
     let iEdit = document.createElement("i");
-    iEdit.className = "bi bi-pen";
+    iEdit.className = 'bi bi-pen'
     divEdit.appendChild(iEdit);
-    document.querySelector("#controls-note").appendChild(divEdit);
-    divEdit.addEventListener ("click", (evt) => {
+    document.querySelector("#controls-note").appendChild(divEdit) ;
+    divEdit.addEventListener("click", (evt) =>{
         evt.preventDefault();
-        editNote(note);
-        
-        
+        document.querySelector("#input-id").value = note.id;
+        document.querySelector("#input-title").value = note.title;
+        document.querySelector("#input-content").value = note.content;
+        modalView.style.display = "none";
+        modal.style.display = "block";
+    });
 
-    }) 
+
 
     let divRemote = document.createElement("div");
     let iRemote = document.createElement("IR");
