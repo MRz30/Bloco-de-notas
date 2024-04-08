@@ -9,17 +9,21 @@
 
   header{
     border-bottom: 1px solid #1b85dc;
-    height: 10vh;
+    height: 15vh;
     display:flex;
   }
   
   #logo{
     width: 30vw;
     height: 10vh;
+    padding-left: 5vw;
+    padding-top: 3.5vh;
+    
   }
   
   #logo img{
-    height: 8vh;
+    height: 10vh;
+    
   }
   #display{
     width: 50vw;
