@@ -63,14 +63,14 @@ const savenote = (note) => {
 
     } 
 
-    else{
-
-        notes.forEach((item, i) =>{
-            if(item.id == note.id){
-                note[i] = note;
+    else {
+        notes.forEach((item, i) => {
+            if (item.id == note.id) {
+                notes[i] = note; 
             }
-        })
+        });
     }
+    
 
         notes = JSON.stringify(notes);
         
