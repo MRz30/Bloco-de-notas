@@ -149,12 +149,27 @@ const showNote = (note)=>{
 
 
 
-    let divRemote = document.createElement("div");
-    let iRemote = document.createElement("IR");
-    iRemote.className = 'bi bi-trash3';
-    divRemote.appendChild(iRemote);
-    document.querySelector("#controls-note").appendChild(divRemote);
+    let divExcluir = document.createElement ("div");
+    let eExcluir = document.createElement("e");
+    eExcluir.className = 'bi bi-trash3'
+    divExcluir.appendChild(eExcluir);
+    document.querySelector('#controls-note').appendChild(divExcluir);
+    divExcluir.addEventListener("click", (evt) =>{
+        evt.preventDefault();
+        if (confirm("Tem certeza que deseja excluir esta nota?")) {
+            deleteNote(note.id);
+        }
+     
+    })
+
     
+    const deleteNote = (noteId) => {
+        let notes = loadNotes();
+        notes = notes.filter(note => note.id != noteId);
+        notes = JSON.stringify(notes);
+        localStorage.setItem('notes', notes);
+        listNotes();
+    };
 };
 
 const editNote = (note) => {
