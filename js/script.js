@@ -19,7 +19,9 @@ addNote.addEventListener("click", (evt) => {
     modal.style.display = "block";
     addNote.style.display = "none";
     notes.style.display = "none";
+    console.log(notes);
 })
+
 
 btnCloseModal.addEventListener("click", (evt) => {
     evt.preventDefault ();
