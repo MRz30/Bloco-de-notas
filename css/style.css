@@ -3,6 +3,10 @@
     padding:0;
   }
   
+  body{
+    background-color: #cfe7fb;
+  }
+
   header{
     border-bottom: 1px solid #1b85dc;
     height: 10vh;
@@ -36,12 +40,16 @@
     justify-content: space-around;
   }
   
+  .card{
+    background-color: rgb(169, 197, 222);
+  }
+
   .card a{
     text-decoration: none;
   }
   
   #modal-view{
-    border:1px solid #1b85dc;
+    border:1px solid #000000;
     position: absolute;
     display:none;
     width: 90vw;
@@ -54,7 +62,7 @@
   }
   
   #modal{
-    border:1px solid #1b85dc;
+    border:1px solid #000000;
     position: absolute;
     padding:2vh 2vw;
     display:none;
